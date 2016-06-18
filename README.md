@@ -12,7 +12,7 @@ by setting `plugins_install_location="path/to/plugin_install"` in the plugin con
 
 ### Custom Plugins Location
 The default plugins location uses the default zsh custom plugins location
-`$HOME/.oh-my-zsh/custom/plugins` but this cane be overwritten by setting
+`$HOME/.oh-my-zsh/custom/plugins` but this can be overwritten by setting
 `custom_plugins_location="path/to/custom/plugins"` in the plugin config file.
 
 ## Basic Usage
