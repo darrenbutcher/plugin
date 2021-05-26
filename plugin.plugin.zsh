@@ -56,7 +56,7 @@ __plugin_init(){
   plugin_file="$plugin_dir/$plugin_name.plugin.zsh"
   touch $plugin_file
   __plugin_template $plugin_name $plugin_file
-  subl $plugin_file
+  $EDITOR $plugin_file
 }
 
 __plugin_error(){
@@ -162,7 +162,7 @@ plugin_runner() {
       plugin_file=$custom_plugins_location/$plugin_name/"$plugin_name.plugin.zsh"
       
       if [[ -f $plugin_file ]]; then
-        subl $plugin_file
+        $EDITOR $plugin_file
       else
         __plugin_error 404
       fi
@@ -171,7 +171,7 @@ plugin_runner() {
     fi
 
   elif [[ $@ == "config" ]]; then 
-    subl $plugins_install_location
+    $EDITOR $plugins_install_location
 
   elif [[ $1 == "config" && $2 == "show" || $2 == "s"  ]]; then 
     less $plugins_install_location
